@@ -1,0 +1,270 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
+  z-index: 1000;
+}
+.modal {
+  @media screen and (max-width: 767.7px) {
+    height: 90vh;
+    overflow-y: auto;
+    padding: 20px;
+    position: fixed;
+    width: 270px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 80%;
+    max-height: 80vh; 
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: auto;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 806px;
+    height: auto;
+    padding: 20px;
+  }
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: #ffffff;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-content-container {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    gap: 16px;
+  }
+}
+
+.modal-title {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.15;
+  text-transform: uppercase;
+
+  margin-bottom: 21px;
+
+  color: #000000;
+
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+    line-height: 1.15;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 30px;
+    line-height: 1.11;
+  }
+}
+
+@media screen and (max-width: 767.7px) {
+  .modal-photo-container {
+    margin-bottom: 20px;
+  }
+}
+
+.statistic-container {
+  margin-bottom: 20px;
+}
+
+.statistic-wraper {
+  display: flex;
+}
+.first-item-statistic {
+  width: 69px;
+  margin-right: 51px;
+  white-space: nowrap;
+}
+.statistics-name {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  white-space: nowrap;
+
+  color: #8c8c8c;
+}
+
+.statistics-name:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.statistics-value {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.16;
+}
+
+.statistic-vote {
+  padding: 1px 10px;
+  background-color: #b92f2c;
+  color: #ffffff;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.statistic-votes {
+  padding: 1px 4px;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+
+  margin-left: 5px;
+}
+
+.statistics-value:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.content-modal-title {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+}
+
+.content-modal {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.66;
+  flex-basis: 50%;
+
+  margin-bottom: 20px;
+
+  color: #000000;
+}
+
+.modal-btn-container {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.content-modal-title {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+
+  margin-bottom: 8px;
+}
+
+.modal-btn {
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  border-radius: 100px;
+  border: none;
+}
+
+.btn-add-watched {
+  @media screen and (min-width: 320px) {
+    padding: 10px 12px;
+  }
+  @media screen and (min-width: 768px) {
+    padding: 12px 18px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 14px 32px;
+  }
+
+  padding: 12px 18px;
+
+  background-color: #b92f2c;
+  color: #ffffff;
+
+  transition: transform 300ms cubic-bezier(0.38, 0.53, 0.8, 0.71);
+
+  &:hover,
+  &:focus {
+    color: #b92f2c;
+    background-color: #ffffff;
+    outline: 1px solid #000000;
+    transform: scale(1.04);
+    box-shadow: 0 0 5px rgba(112, 92, 2, 0.7);
+  }
+}
+
+.btn-add-queue {
+  @media screen and (min-width: 320px) {
+    padding: 10px 14px;
+  }
+  @media screen and (min-width: 768px) {
+    padding: 12px 18px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 14px 24px;
+  }
+
+  color: #b92f2c;
+  background-color: #ffffff;
+  padding: 14px 24px;
+
+  outline: 1px solid #000000;
+
+  transition: transform 300ms cubic-bezier(0.38, 0.53, 0.8, 0.71);
+
+  &:hover,
+  &:focus {
+    color: white;
+    background-color: #b92f2c;
+    outline: 1px solid #b92f2c;
+    transform: scale(1.04);
+    box-shadow: 0 0 5px rgba(185, 47, 44, 0.7);
+  }
+}
+
+.statistick-img {
+  @media screen and (min-width: 320px) {
+    width: 264px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 264px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 375px;
+  }
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.button-modal {
+  background-color: #ffffff;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.modal-trailer {
+  iframe {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,97 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+    background-color: #ffffff;
+  }
+  
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .footer {
+    margin-top: auto;
+  }
+  
+  
+  .visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0;
+  }
+  
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .link {
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  button {
+    display: block;
+    cursor: pointer;
+    border: none;
+    border-radius: 100px;
+    transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
+  }
+  
+  $mobile: 320px;
+  $tablet: 768px;
+  $desktop: 1280px;
+  
+  .container {
+    margin:0 auto;
+    padding-right: 20px;
+    padding-left: 20;
+    max-width: 320px;
+    width: 100%;
+   
+    @media screen and (min-width: 768px) {
+      max-width: 768px;
+      padding-right: 32px;
+      padding-left: 32px;
+    }
+  
+    @media screen and (min-width: 1280px) {
+      max-width: 1280px;
+    }
+  }
+
+  .is-hidden {
+    display: none;
+  }

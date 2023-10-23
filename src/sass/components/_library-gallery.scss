@@ -1,0 +1,76 @@
+.library-gallery {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-top: 32px;
+    margin-bottom: 61px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 60px;
+  }
+}
+
+.library-gallery__wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  
+
+  body.dark-theme & {
+    background-image: none;
+  }
+}
+
+.library-gallery__image {
+  @media screen and (max-width: 767px) {
+    max-width: 350px;
+  }
+  @media screen and (min-width: $tablet) {
+    max-width: 550px;
+  }
+  @media screen and (min-width: $desktop) {
+    max-width: 750px;
+  }
+}
+
+.library-gallery__text {
+  margin-top: 10px;
+  color: #b92f2c;
+
+  @media screen and (max-width: 767px) {
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.05;
+  }
+  @media screen and (min-width: $tablet) {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 1.05;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 25px;
+    line-height: 1.2;
+  }
+}
+.library-home {position: relative;
+padding-top: 10%;}
+.libr-bttn:hover {
+    background-color: #b92f2c;
+    color: #ffffff;
+    transform: scale(1.04);
+    box-shadow: 0 0 5px #ffffff;
+  }

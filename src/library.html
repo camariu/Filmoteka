@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Explore Filmoteka, crafted by The Wizards of DOM. Dive into the latest movies, search by keywords, and effortlessly save your favorites to your personal library. Mark movies as watched or queued and manage your cinematic journey with ease!">
+    <meta name="keywords" content="movies, latest movies, movie search, save movies, filmoteka, watched movies, queued movies, movie library">
+    <meta name="author" content="The Wizards of DOM - GoIT Students">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>Filmoteka - Search, Save & Categorize Latest Movies | The Wizards of DOM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="images/favicon.ico"/>
+    <link rel="stylesheet" href="./sass/index.scss" />
+    <script type="module" src="./library.js"></script>
+  </head>
+  <body class="library-page">
+    <div class="wrapper">
+      <include src="./partials/loader.html"></include>
+      <include src="./partials/mylibrary.html"></include>
+        <include src="./partials/gallery.html"></include>
+        <include src="./partials/library-gallery.html"></include>
+      <include src="./partials/pagination.html"></include>
+      <include src="./partials/footer.html"></include>
+      <include src="./partials/scroll.html"></include>
+    </div>
+    <!-- ❗️❗️❗️ Add partials like so for every page  --> 
+    <include src="./partials/modalCard.html"></include>
+    <include src="./partials/footer-modal.html"></include> 
+  </body>
+</html>

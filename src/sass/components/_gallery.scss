@@ -1,0 +1,221 @@
+.section-gallery {
+  @media screen and (max-width: 767px) {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-top: 32px;
+    margin-bottom: 61px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 60px;
+  }
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: $tablet) {
+    margin-left: -32px;
+    margin-top: -32px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-left: -16px;
+    margin-top: -32px;
+  }
+}
+
+.gallery__item {
+  display: flex;
+  max-width: 280px;
+  position: relative;
+
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 20px;
+    }
+  }
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc(100% / 2 - 16px);
+    margin-left: 32px;
+    margin-top: 32px;
+    max-width: 336px;
+    position: relative;
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc(100% / 3 - 16px);
+    margin-top: 32px;
+    margin-left: 16px;
+    max-width: 395px;
+    border-radius: 5px;
+    position: relative;
+    transition: transform 300ms cubic-bezier(0.38, 0.53, 0.8, 0.71);
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+
+    .gallery__image {
+      filter: saturate(165%);
+      box-shadow: 0 0 20px #662423;
+    }
+  }
+}
+
+.gallery__image {
+  border-radius: 5px;
+  cursor: pointer;
+  filter: drop-shadow(1px 1px 1px rgba(55%, 55%, 55%, 0.4));
+  filter: none;
+  width: 280px;
+  height: 398px;
+
+  @media screen and (min-width: $tablet) {
+    min-width: 336px;
+    height: auto;
+  }
+  @media screen and (min-width: $desktop) {
+    min-width: 394px;
+    height: auto;
+  }
+}
+
+.info {
+  padding-top: 10px;
+  @media screen and (min-width: $tablet) {
+    padding-top: 8px;
+  }
+  @media screen and (min-width: $desktop) {
+    padding-top: 12px;
+  }
+
+  &__item {
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+
+    color: #000000;
+
+    @media screen and (min-width: $tablet) {
+      line-height: calc(16px / 12px);
+    }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 20px;
+      line-height: calc(24px / 20px);
+    }
+  }
+}
+
+.info-detail {
+  display: flex;
+
+  &__item {
+    padding-right: 5px;
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+
+    color: #b92f2c;
+
+    @media screen and (min-width: $tablet) {
+      line-height: calc(16px / 12px);
+    }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 20px;
+      line-height: calc(24px / 20px);
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 5px;
+    border-right: 1px solid #b92f2c;
+  }
+
+  &__rating {
+    margin-left: 20px;
+    margin-right: 5px;
+  }
+}
+
+.film-rating {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: #ffffff;
+  font-size: 14px;
+}
+.film-rating--green {
+  color: green;
+  border: 1px solid green;
+}
+
+.film-rating--orange {
+  border: 1px solid orange;
+  color: orange;
+}
+
+.film-rating--red {
+  border: 1px solid red;
+  color: red;
+}
+
+.btn-gallery__delete {
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 300ms ease-in-out;
+  position: absolute;
+  border-radius: 20%;
+  right: 5px;
+  bottom: 8px;
+
+  @media screen and (min-width: $tablet) {
+    display: inline-block;
+    right: 6px;
+    bottom: 7px;
+  }
+  @media screen and (min-width: $desktop) {
+    display: inline-block;
+    right: 6px;
+    bottom: 6px;
+    min-width: 35px;
+    min-height: 35px;
+  }
+}
+
+.btn-gallery__delete:hover {
+  background-color: #d64543;
+  transform: scale(1.2);
+}
+
+.btn__img {
+  @media screen and (max-width: 767px) {
+    min-width: 20px;
+    min-height: 20px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    min-width: 25px;
+    min-height: 25px;
+  }
+  @media screen and (min-width: $desktop) {
+    min-width: 35px;
+    min-height: 35px;
+  }
+}

@@ -1,0 +1,16 @@
+.footer-modal {
+  width: auto;
+  height: 77px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 16px;
+  color: #545454;
+  background: #f7f7f7;
+  &_students {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
